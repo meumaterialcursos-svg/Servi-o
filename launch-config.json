@@ -1,0 +1,46 @@
+{
+  "appName": "Serviços Perto",
+  "version": "4.0.0",
+  "launchRegion": {
+    "city": "Recife",
+    "state": "PE",
+    "country": "BR",
+    "mode": "pilot"
+  },
+  "roles": [
+    "client",
+    "provider",
+    "admin"
+  ],
+  "payments": {
+    "methodsPlanned": [
+      "pix",
+      "card"
+    ],
+    "enabledInPrototype": false,
+    "providerIntegrationRequired": true
+  },
+  "commission": {
+    "initialPercent": 12,
+    "calculatedOnBackend": true
+  },
+  "providerVerification": {
+    "mode": "gradual",
+    "newProviderDefaultStatus": "pending",
+    "canReceiveRequestsBeforeApproval": false
+  },
+  "frontend": {
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "pwaReady": true
+  },
+  "backend": {
+    "auth": "Firebase Authentication",
+    "database": "Cloud Firestore",
+    "fileStorage": "Cloud Storage",
+    "serverLogic": "Cloud Functions"
+  }
+}

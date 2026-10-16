@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Encontre profissionais para serviços perto de você."><meta name="application-version" content="4.1">
+  <title>Serviços Perto — Versão 2.0</title>
+    <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#f7f7f4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Serviços Perto, início">
+        <span class="brand-mark">SP</span>
+        <span><strong>serviços<span class="brand-dot">.</span>perto</strong><small>Quem resolve, está por perto.</small></span>
+      </a>
+      <div class="top-actions">
+        <button class="location-pill" id="locationButton" type="button"><span class="pin">⌖</span><span><small>Atendendo em</small><strong id="locationLabel">Sua região</strong></span><span aria-hidden="true">⌄</span></button>
+        <button class="avatar-button" id="profileButton" type="button" aria-label="Meu perfil">LE</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="launch-region" aria-label="Região de lançamento">
+        <span class="launch-region-icon" aria-hidden="true">⌖</span>
+        <div><strong>Serviços Perto em Recife</strong><p>Região piloto: Recife, Pernambuco. Confirme o bairro ao solicitar um serviço.</p></div>
+        <span class="launch-tag">PILOTO</span>
+      </section>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">SERVIÇOS LOCAIS, SEM COMPLICAÇÃO</span>
+          <h1>O que você precisa<br><span>resolver hoje?</span></h1>
+          <p>Encontre profissionais para sua casa, seu veículo e seus pets.</p>
+          <form class="search-bar" id="searchForm">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Ex.: passeador, eletricista, mecânico..." aria-label="Buscar serviço ou profissional">
+            <button type="submit">Buscar</button>
+          </form>
+          <div class="trust-row"><span>✓ Profissionais avaliados</span><span>✓ Orçamento antes de contratar</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-circle circle-one"></div><div class="art-circle circle-two"></div>
+          <div class="art-card art-card-main"><span class="art-icon">🛠️</span><strong>Problema resolvido.</strong><small>Um profissional perto de você.</small></div>
+          <div class="art-card art-card-float"><span class="online-dot"></span><span><strong>Novos profissionais</strong><small>na sua região</small></span></div>
+          <div class="art-spark">✦</div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading"><div><span class="eyebrow">ENCONTRE POR CATEGORIA</span><h2>Qual serviço você procura?</h2></div><span class="section-note" id="categoryCount">10 categorias</span></div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </section>
+
+      <section class="section-block split-section">
+        <div class="section-heading"><div><span class="eyebrow">SIMPLES DO COMEÇO AO FIM</span><h2>Contratar ficou mais fácil</h2></div></div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Escolha o serviço</h3><p>Conte o que precisa e informe local, data e detalhes.</p></article>
+          <article class="step-card"><span class="step-number">02</span><div class="step-icon">♧</div><h3>Compare propostas</h3><p>Veja preços, avaliações e disponibilidade dos profissionais.</p></article>
+          <article class="step-card"><span class="step-number">03</span><div class="step-icon">✓</div><h3>Combine e avalie</h3><p>Confirme o atendimento e avalie sua experiência.</p></article>
+        </div>
+      </section>
+
+      <section class="provider-banner">
+        <div><span class="eyebrow">VOCÊ PRESTA SERVIÇOS?</span><h2>Transforme seu trabalho<br>em novas oportunidades.</h2><p>Crie seu perfil e encontre clientes na sua região.</p></div>
+        <button class="button button-light" id="becomeProvider" type="button">Quero ser profissional <span>→</span></button>
+      </section>
+
+
+      <section class="section-block launch-model" id="launchModel">
+        <div class="section-heading"><div><span class="eyebrow">MODELO DE OPERAÇÃO</span><h2>Como funciona</h2></div><span class="section-note">Recife · piloto</span></div>
+        <div class="launch-model-grid">
+          <article class="model-tile"><span class="model-icon">1</span><strong>Solicite</strong><p>Explique o serviço, informe o bairro e envie fotos se necessário.</p></article>
+          <article class="model-tile"><span class="model-icon">2</span><strong>Compare</strong><p>Receba propostas e compare preço, prazo e perfil profissional.</p></article>
+          <article class="model-tile"><span class="model-icon">3</span><strong>Contrate</strong><p>Escolha a proposta e acompanhe a contratação pela plataforma.</p></article>
+        </div>
+        <p class="launch-note">Pix e cartão estão previstos para a etapa de integração. Esta versão não processa pagamentos reais.</p>
+      </section>
+      <section class="section-block provider-section" id="providerSection">
+        <div class="section-heading">
+          <div><span class="eyebrow">PARA QUEM PRESTA SERVIÇOS</span><h2>Área do profissional</h2></div>
+          <span class="section-note">Protótipo local</span>
+        </div>
+        <div class="provider-panel">
+          <div class="provider-intro">
+            <span class="provider-icon">✦</span>
+            <div><strong>Receba oportunidades na sua região</strong><p>Monte seu perfil de profissional e organize os serviços que você oferece neste dispositivo.</p></div>
+          </div>
+          <form id="providerForm" class="provider-form">
+            <label>Nome profissional<input name="name" required maxlength="80" placeholder="Ex.: Ana Serviços Residenciais"></label>
+            <div class="form-grid">
+              <label>Especialidade principal<select name="category" required id="providerCategory"></select></label>
+              <label>Valor inicial (R$)<input name="price" inputmode="decimal" placeholder="Ex.: 80,00" maxlength="20"></label>
+            </div>
+            <label>Descrição dos serviços<textarea name="description" rows="3" maxlength="500" placeholder="Conte sua experiência e os serviços que realiza..."></textarea></label>
+            <label>Região de atendimento<input name="region" maxlength="100" placeholder="Ex.: Centro e bairros próximos"></label>
+            <label class="provider-toggle"><input name="available" type="checkbox" checked> Estou disponível para novos serviços</label>
+            <button class="button button-primary" type="submit">Salvar perfil profissional</button>
+          </form>
+          <div id="providerSaved" class="provider-saved" hidden></div>
+        </div>
+      </section>
+
+      <section class="section-block requests-section" id="ordersSection">
+        <div class="section-heading"><div><span class="eyebrow">ACOMPANHAMENTO</span><h2>Meus pedidos</h2></div><span class="section-note" id="requestSummary">Salvos neste dispositivo</span></div>
+        <div class="request-filters" role="group" aria-label="Filtrar pedidos">
+          <button class="filter-chip active" type="button" data-request-filter="todos">Todos</button>
+          <button class="filter-chip" type="button" data-request-filter="abertos">Em andamento</button>
+          <button class="filter-chip" type="button" data-request-filter="concluidos">Concluídos</button>
+        </div>
+        <div class="backup-actions" aria-label="Backup de pedidos">
+          <button class="button button-light backup-button" id="exportRequestsButton" type="button">Exportar backup</button>
+          <label class="button button-light backup-button" for="importRequestsInput">Importar backup</label>
+          <input id="importRequestsInput" type="file" accept="application/json,.json" hidden>
+        </div>
+        <div id="requestsList" class="requests-list"><div class="empty-state"><span>▤</span><strong>Seus pedidos aparecerão aqui</strong><p>Quando solicitar um serviço, você poderá acompanhar o pedido nesta área.</p></div></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <button class="nav-item active" data-view="home" type="button"><span>⌂</span><small>Início</small></button>
+      <button class="nav-item" data-view="categories" type="button"><span>▦</span><small>Categorias</small></button>
+      <button class="nav-item nav-center" data-view="request" type="button"><span>＋</span><small>Solicitar</small></button>
+      <button class="nav-item" data-view="orders" type="button"><span>▤</span><small>Pedidos</small></button>
+      <button class="nav-item" data-view="profile" type="button"><span>◉</span><small>Perfil</small></button>
+    </nav>
+  </div>
+
+  <dialog class="modal" id="serviceDialog">
+    <form id="serviceRequestForm" class="modal-content">
+      <div class="modal-heading"><div><span class="eyebrow">NOVO PEDIDO</span><h2>Solicitar serviço</h2></div><button class="icon-button" type="button" data-close="serviceDialog" aria-label="Fechar">×</button></div>
+      <p class="modal-intro">Descreva o que precisa. Nesta versão demonstrativa, o pedido fica salvo apenas neste dispositivo.</p>
+      <label>Categoria<select id="serviceCategory" name="category" required></select></label>
+      <label>O que precisa ser feito?<input name="title" required maxlength="100" placeholder="Ex.: passeio de 30 minutos com meu cachorro"></label>
+      <div class="form-row"><label>Data desejada<input name="date" type="date" required></label><label>Período<select name="period" required><option value="">Escolha</option><option>Manhã</option><option>Tarde</option><option>Noite</option><option>Flexível</option></select></label></div>
+      <label>Local do atendimento<input name="location" required maxlength="160" placeholder="Bairro, cidade ou endereço"></label>
+      <label>Detalhes adicionais<textarea name="details" rows="3" maxlength="700" placeholder="Medidas, modelo do veículo, porte do cão, materiais etc."></textarea></label>
+      <label>Faixa de orçamento (opcional)<select name="budget"><option value="">Ainda não sei</option><option>Até R$ 50</option><option>R$ 50 a R$ 150</option><option>R$ 150 a R$ 400</option><option>Acima de R$ 400</option><option>Preciso de orçamento</option></select></label>
+      <div class="form-actions"><button class="button button-quiet" type="button" data-close="serviceDialog">Cancelar</button><button class="button button-primary" type="submit">Salvar pedido</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="profileDialog">
+    <form id="profileForm" class="modal-content">
+      <div class="modal-heading"><div><span class="eyebrow">SEU ESPAÇO</span><h2>Perfil e acesso</h2></div><button class="icon-button" type="button" data-close="profileDialog" aria-label="Fechar">×</button></div>
+      <p class="modal-intro">Protótipo inicial: estes dados não são enviados para um servidor.</p>
+      <label>Como devemos chamar você?<input name="name" maxlength="80" placeholder="Seu nome"></label>
+      <label>Você está usando como<select name="role"><option value="cliente">Cliente</option><option value="profissional">Profissional</option></select></label>
+      <label>Telefone para contato (opcional)<input name="phone" type="tel" maxlength="30" placeholder="(00) 00000-0000"></label>
+      <div class="form-actions"><button class="button button-primary" type="submit">Salvar perfil</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="locationDialog">
+    <form id="locationForm" class="modal-content">
+      <div class="modal-heading"><div><span class="eyebrow">LOCALIZAÇÃO</span><h2>Sua região</h2></div><button class="icon-button" type="button" data-close="locationDialog" aria-label="Fechar">×</button></div>
+      <p class="modal-intro">Informe sua cidade ou região para personalizar a busca. O protótipo não rastreia sua localização.</p>
+      <label>Cidade / região<input name="location" required maxlength="100" placeholder="Ex.: Recife, PE"></label>
+      <div class="form-actions"><button class="button button-primary" type="submit">Salvar localização</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/app.js" defer></script>
+</body>
+</html>

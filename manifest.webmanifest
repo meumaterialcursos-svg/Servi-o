@@ -1,0 +1,12 @@
+{
+  "name": "Serviços Perto",
+  "short_name": "Serviços Perto",
+  "description": "Marketplace de serviços a domicílio em Recife e região.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f7f4",
+  "theme_color": "#f7f7f4",
+  "icons": []
+}
